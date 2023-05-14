@@ -10,13 +10,19 @@ namespace Programacion101_Practica01_Ejercicio03
     {
         static void Main(string[] args)
         {
+           /*
+            Haz un programa que pida al usuario el precio de un objeto sin IVA y la cantidad
+            de IVA aplicable. 
+            Luego calcula el precio final.
+            */
+            
             double precio;
-            double alicuota;
+            double alicuotaIVA;
             double precioFinal;
 
             double CalcularPrecioFinal()
             {
-                precioFinal = precio * (1 + alicuota/100);
+                precioFinal = precio * (1 + alicuotaIVA/100);
                 return precioFinal;
             }
 
@@ -24,7 +30,7 @@ namespace Programacion101_Practica01_Ejercicio03
             precio = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("Ingrese la alicuota de IVA...");
-            alicuota = Convert.ToDouble(Console.ReadLine());
+            alicuotaIVA = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine("El precio final del producto es: "+CalcularPrecioFinal());
             Console.ReadLine();
